@@ -6,13 +6,12 @@ pipeline {
         sh 'python3 --version'
       }
     }
-    stage('Install pip') {
+    stage('Install Flask') {
       steps {
         sh '''
-            curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-            python3 get-pip.py
-            pip --version
-            '''
+          pip install flask
+          flask --version
+          '''
       }
     }
     stage('hello') {
