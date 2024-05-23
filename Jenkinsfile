@@ -10,10 +10,10 @@ pipeline {
       steps {
                 sh '''
                     # Check if pip is installed
-                    python -m ensurepip --default-pip
+                    python3 -m ensurepip --default-pip
                     
                     # Upgrade pip
-                    python -m pip install --upgrade pip
+                    python3 -m pip install --upgrade pip
                 '''
         }
     }
