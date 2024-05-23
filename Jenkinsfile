@@ -12,10 +12,14 @@ pipeline {
                 }
             }
         }
-      stage('Hello') {
+      stage('Bandit') {
         steps {
-          sh 'python3 hello.py'
+            script {
+          sh 'pip install bandit'
+          sh 'bandit --version'
+          sh 'bandit -r hello.py'
         }
     }
-  }
+}
+}
 }
