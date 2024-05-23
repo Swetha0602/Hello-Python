@@ -15,7 +15,7 @@ pipeline {
       stage('Bandit') {
         steps {
             script {
-          sh 'pip3 install bandit'
+          sh 'sudo apt install python3-bandit'
           sh 'bandit --version'
           sh 'bandit -r hello.py'
         }
