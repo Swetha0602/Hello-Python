@@ -6,16 +6,16 @@ pipeline {
         sh 'python3 --version'
       }
     }
-    stage('hello') {
-      steps {
-        sh 'python3 hello.py'
-      }
-    }
     stage('Install Flask') {
       steps {
         script {
           sh 'pip install Flask'
         }
+      }
+    }
+    stage('hello') {
+      steps {
+        sh 'python3 hello.py'
       }
     }
   }
