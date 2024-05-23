@@ -11,6 +11,13 @@ pipeline {
         sh 'python3 hello.py'
       }
     }
+    stage('Install Flask') {
+      steps {
+        script {
+          sh 'pip install Flask'
+        }
+      }
+    }
   }
 }
       
