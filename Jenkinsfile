@@ -3,15 +3,11 @@ pipeline {
   stages {
     stage('version') {
       steps {
-        sh 'python3 --version'
-      }
-    }
-    stage('Install Flask') {
-      steps {
         sh '''
-          pip install flask
-          flask --version
-          '''
+        pip --version
+        python3 --version
+        flask --version
+        '''
       }
     }
     stage('hello') {
