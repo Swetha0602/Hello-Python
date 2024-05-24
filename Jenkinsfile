@@ -17,7 +17,8 @@ pipeline {
             script {
              sh 'echo "yes" | sudo apt install python3-bandit'
               sh 'bandit --version'
-              sh 'bandit -r example.py'
+              //sh 'bandit -r hello.py'
+              sh  'bandit -r hello.py -f json -o bandit_report.json'
               
         }
     }
